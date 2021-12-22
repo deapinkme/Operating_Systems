@@ -1,0 +1,45 @@
+README
+======
+A. This package includes the following files:
+
+|-- sched.py [as requested in assignment]
+|-- processes.csv [as requested in assignment]
+|-- run.sh [build script]
+|-- README.txt [This file]
+
+
+B. Use your designed makefile:
+To compile the code and build the executable using the command 
+systemprompt>  make
+// or make Starter
+
+To remove the  executable files use
+
+systemprompt>  make clean
+
+To run the program use
+
+systemprompt> ./Starter
+
+C. Answer the following questions (1 point each, select/type the right answer).
+
+1. What is the other name for Shortest Job First Preemptive Algorithm?
+  Shortest Remaining Time First.
+
+2. What are the 5 different states a process can be in scheduling (Look into process state diagram)?
+  New, Ready, Running, Wait and Complete.
+
+3. Shortest Job First is like Priority Scheduling with the priority based on ______ of the process?
+  length of burst (burst time)
+
+4. CONVOY effect is the primary disadvantage of First Come First Serve Scheduling algorithm.
+
+5. How does Multi Level Feedback queue prevent starvation of processes that waits too long in lower priority queue?
+  It can prevent starvation by moving the process that waits too long from a lower to a hihher priority queue.
+
+  BUG REPORT:
+  The assignemt results seem to sort by process ID and not by the order of input file, which is concievably arrival order.
+  This causes process 2 to be selected ahead of process 3 in FCFS.
+  I have implemented both the buggy (as in the assignemt) and the correct versions.
+  To run the corrected version uncomment line with comment 'correct version' at the end
+  and comment the next line.
